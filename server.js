@@ -20,7 +20,7 @@ connectToDb((err) => {
     if (!err) {
         app.listen(process.env.PORT || 3000, () => {
         })
-        db = getDb()
+        db = getDb().then(console.log("Connected"))
     }
 })
 
